@@ -10,7 +10,8 @@ figure {
 	width: 500%;
 	position: relative;
 	margin: 0; padding: 0; font-size: 0;
-	animation: 10s slide infinite;
+	/*animation: 5s slide infinite, */
+	animation: 5s 2s slide-back infinite;
 }
 
 img {
@@ -28,4 +29,13 @@ img {
 	75% { left: -300%; }
 	95% { left: -300%; }*/
 	100% { left: -400%; }
+}
+
+@keyframes slide-back {
+	0% { left: 0px; }
+	15% { left: 20px; }
+	25% { left: 25px; }
+	35% { left: 15px; }
+	50% { left: 50px; }
+	100% { left: -2400px; }
 }
