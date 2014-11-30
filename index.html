@@ -6,7 +6,55 @@
 	<script type="text/javascript" src='tpl.js'></script>
 </head>
 <body>
-	<p>can you see it???</p>
+	<h2>Basic shapes</h2>
+	
+	<h4> - rectangles </h4>
+	<div class="rectangles">
+		<svg width='200' height='200'>
+			<rect x='25' y='25' width='150' height='150' stroke='yellow' stroke-width='5' fill='green' />
+		</svg>
+
+		<svg width='200' height='200'>
+			<rect x='10' y='45' width='180' height='100' fill='transparent' stroke='red' stroke-width='20' rx='50' ry='50' />
+		</svg>	
+	</div>
+
+	<h4> - circle/ellipse</h4>
+	<div class="circle-ellipse">
+		<svg width='200' height='200'>
+			<circle cx='100' cy='100' r='50' fill='yellow' stroke='green' stroke-width='5' />
+		</svg>
+		<svg width='200' height='200'>
+			<ellipse cx='100' cy='100' rx='50' ry='80' fill='transparent' stroke='black' stroke-width='8' />
+		</svg>
+	</div>
+
+	<h4> - line/polyline</h4>
+	<div class="line-polyline">
+		<svg width='200' height='200'>
+			<line x1='0' x2='200' y1='0' y2='200' fill='transparent' stroke='black' stroke-width='5' />
+		</svg>
+		<svg width='200' height='200'>
+			<polyline points='200 0, 200 20, 150 20, 100 60, 100 100, 120 120, 120 150, 0 200' fill='transparent' stroke='orange' stroke-width='6' />
+		</svg>
+	</div>
+
+	<h4> - polygon</h4>
+	<div class="polygon">
+		<svg width='200' height='200'>
+			<polygon points='200 0, 200 20, 150 20, 100 60, 100 100, 120 120, 120 150, 0 200' fill='green' stroke='orange' stroke-width='6' />
+		</svg>
+	</div>
+
+	<h4> - path</h4>
+	<div class="path">
+		<svg width='200' height='200'>
+			<path d="M20,130 Q40,105 50,130 T90,130" fill="none" stroke="blue" stroke-width="5" />
+		</svg>
+	</div>
+
+	
+
 
 </body>
 </html>
