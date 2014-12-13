@@ -1,0 +1,71 @@
+<div class="grid-container">
+	<button ng-click="showRating()">to console</button>
+	<span ng-repeat="item in gridData">{{item.category}} : {{item.rating}} | </span>
+	<table>
+		<tr>
+			<th>Generic</th>
+			<th>Moody's</th>
+			<th>S&P</th>
+			<th>Fitch</th>
+		</tr>
+		<!-- prime -->
+		<tr ng-repeat="item in gridData">
+			<th>{{item.category}}</th>
+			<td>
+				<label ng-repeat="i in item['Moodys']"><input type='radio' 
+				ng-model="item.rating['Moodys']" 
+				name="{{item.category}} - Moodys" 
+				value="{{i}}" />{{i}}</label>
+			</td>
+			<td>
+				<label ng-repeat="i in item['S&P']"><input type='radio' 
+				ng-model="item.rating['S&P']" 
+				name="{{item.category}} - S&P" 
+				value="{{i}}" />{{i}}</label>
+			</td>
+			<td>
+				<label ng-repeat="i in item['Fitch']"><input type='radio' 
+				ng-model="item.rating['Fitch']" 
+				name="{{item.category}} - Fitch" 
+				value="{{i}}" />{{i}}</label>
+			</td>
+		</tr>
+		<!-- high grade -->
+		<!-- <tr>
+			<th rowspan="3">High Grade</th>
+			<td>
+				<label><input type='checkbox'/>AA1</label>
+			</td>
+			<td>
+				<label><input type='checkbox'/>AA+</label>
+			</td>
+			<td>
+				<label><input type='checkbox'/>AA+</label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label><input type='checkbox'/>Aa2</label>
+			</td>
+			<td>
+				<label><input type='checkbox'/>AA</label>
+			</td>
+			<td>
+				<label><input type='checkbox'/>AA</label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label><input type='checkbox'/>Aa3</label>
+			</td>
+			<td>
+				<label><input type='checkbox'/>AA-</label>
+			</td>
+			<td>
+				<label><input type='checkbox'/>AA-</label>
+			</td>
+		</tr> -->
+
+	</table>
+
+</div>
