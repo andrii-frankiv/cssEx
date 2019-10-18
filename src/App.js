@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React  from 'react';
+import { connect } from 'react-redux'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import Components from './components'
+import { fetchEntities } from './modules/redux/entities/actions'
+
+
+export class App extends React.Component() {
+  
+  componentDidMount() {
+    this.props.getData()
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          'header text'
+        </header>
+
+        <div className='container'>
+          <Components.UserList> </Components.UserList>
+        </div>
+      </div>
+    );
+  }
 }
 
-export default App;
+
+export default connect(
+  props => ({...props}),
+  dispatch => ({ getData: () => dispatch(fetchEntities)})
+)(App)
